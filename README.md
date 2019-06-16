@@ -1,7 +1,9 @@
 # reddit-startup
-From /r/startup - *Share Your Startup*
+Tell us about your startup! /r/startups wants to hear what you're working on! Contest mode is on
 
-Make sure add callback url in reddit app to http://localhost:8080/authorize
+Some notes:
+- Create reddit app in https://www.reddit.com/prefs/apps
+- Make sure add callback url in reddit app to http://localhost:8080/authorize
 
 ## Project setup
 ```
