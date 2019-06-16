@@ -16,6 +16,7 @@
 import kebabCase from 'lodash-es/kebabCase'
 import orderBy from 'lodash-es/orderBy'
 import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
+import { getAuthorizationHeaders, renewTokens } from '../utils/auth'
 
 export default {
   name: 'home',
@@ -29,15 +30,11 @@ export default {
     }
   },
   methods: {
-    slugify (title) {
-      return kebabCase(title)
-    },
     fetchData() {
-      let accessToken = '';
       this.loading = true
       fetch(`${process.env.VUE_APP_REDDIT_ENDPOINT}/r/startups/search?q=share your startup&limit=100`, {
         headers: {
-          'Authorization': 'Bearer 287784095252-YSnTQlhMwFYrXDMvrl4-NdZaLJ'
+          'Authorization': getAuthorizationHeaders()
         }
       })
         .then(res => res.json())

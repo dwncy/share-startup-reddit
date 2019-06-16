@@ -16,6 +16,7 @@
 <script>
 import unescape from 'lodash-es/unescape'
 import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
+import { getAuthorizationHeaders } from '../utils/auth';
 
 export default {
   name: 'detail',
@@ -36,9 +37,9 @@ export default {
     fetchData() {
       this.loading = true
 
-      fetch(`${process.env.VUE_APP_REDDIT_ENDPOINT}/${this.title}?limit=100`, {
+      fetch(`${process.env.VUE_APP_REDDIT_ENDPOINT}/r/${this.title}?limit=100`, {
         headers: {
-          'Authorization': 'Bearer 287784095252-YSnTQlhMwFYrXDMvrl4-NdZaLJs'
+          'Authorization': getAuthorizationHeaders()
         }
       })
         .then(res => res.json())

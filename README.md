@@ -1,4 +1,7 @@
 # reddit-startup
+From /r/startup - *Share Your Startup*
+
+Make sure add callback url in reddit app to http://localhost:8080/authorize
 
 ## Project setup
 ```
