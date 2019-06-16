@@ -45,7 +45,7 @@ router.beforeEach((to, from, next) => {
     `?client_id=${process.env.VUE_APP_REDDIT_CLIENT_ID}` +
     '&response_type=token' +
     `&state=${process.env.VUE_APP_REDDIT_STATE}` +
-    `&redirect_uri=http://localhost:8080/authorize` +
+    `&redirect_uri=${window.location.href}authorize` +
     '&scope=read'
 })
 

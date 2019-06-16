@@ -3,7 +3,7 @@ Tell us about your startup! /r/startups wants to hear what you're working on! Co
 
 Some notes:
 - Create reddit app in https://www.reddit.com/prefs/apps
-- Make sure add callback url in reddit app to http://localhost:8080/authorize
+- Make sure add callback url in reddit app to BASE_URL/authorize
 
 ## Project setup
 ```
